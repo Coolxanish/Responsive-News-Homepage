@@ -1,0 +1,266 @@
+@font-face {
+    font-family: inter_Regular;
+    src: url('assets/fonts/static/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: inter_Extrabold;
+    src: url('assets/fonts/static/Inter-ExtraBold.ttf');
+}
+@font-face {
+    font-family: inter_Bold;
+    src: url('assets/fonts/static/Inter-Bold.ttf');
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+   
+}
+
+body {
+    background-color: hsl(36, 100%, 99%);
+    margin: 0;
+    font-family: inter_Regular;
+    font-size: 0.9735rem;
+}
+
+.container, header {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2em 0;
+    min-width: 375px;
+    max-width: 1440px;
+}
+
+.nav_list {
+    display: none;
+}
+
+.nav_item {
+    list-style-type: none;
+    color: hsl(236, 13%, 42%);
+}
+
+.nav_item:hover, .foot_title:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_icon {
+    align-self: flex-end;
+    width: 3.5em;
+}
+
+.nav_close_icon {
+    display: none;
+}
+
+.main_title {
+    font-family: inter_Extrabold;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.article_text {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 1em 3em;
+    letter-spacing: 0.3em;
+}
+
+.btn:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: hsl(240, 100%, 5%);
+    color: #fff;
+    padding: 1em 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side_wd {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sidebar_title {
+    color: hsl(35, 77%, 62%);
+    font-family: inter_Bold;
+    font-size: 2em;
+}
+
+.side_title {
+    font-family: inter_Bold;
+    font-size: 1.3rem;
+}
+
+.side_title:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.side_text {
+    color: hsl(236, 13%, 42%);
+    margin-bottom: 40px;
+}
+
+.side {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.margin_tp {
+    margin-top: 60px;
+}
+
+.foot_row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.inside_foot_column {
+    margin-top: -30px;
+}
+
+.extra_margin {
+    margin-top: -20px;
+}
+
+.foot_img {
+    max-width: 114px;
+    max-height: 160px;
+}
+
+.foot_num {
+    font-family: inter_Bold;
+    font-size: 2rem;
+    color: hsl(233, 8%, 79%);
+}
+
+.foot_title {
+    font-family: inter_Extrabold;
+    font-size: 1.2rem;
+    color: hsl(240, 100%, 5%);
+}
+
+.foot_text {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.8em;
+}
+
+@media (max-width: 1000px) {
+    .nav_visible {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        position: absolute;
+        right: 0%;
+        background-color: #ffffff;
+        height: 100%;
+        width: 70%;
+    }
+
+    .nav_item {
+        font-size: 1.4em;
+    }
+
+    .nav_item_1 {
+        margin-top: 80px;
+    }
+
+    .nav_close_icon {
+        display: unset;   
+        width: 2.5em; 
+        
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    .img_container {
+        grid-row: 1 / 2;
+        background-image: url('assets/images/image-web-3-desktop.jpg');
+    }
+
+    .img_container > img {
+        display: none;
+    }
+
+    .article_container {
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .sidebar {
+      margin: 0;
+      grid-row: 1 / 3;
+    }
+
+    footer {
+        display: flex;
+        grid-column: 1 / 3;
+        gap: 100px;
+    }
+
+    .main_title {
+        width: 40%;
+        margin: 0;
+    }
+    
+    .article_container--2 {
+        width: 50%;
+        margin: 0;
+    }
+
+    .margin_tp {
+        margin: 0;
+    }
+
+    .nav_list {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    .nav_icon {
+        display: none;
+    }
+}
+
+
+
+
+
+
